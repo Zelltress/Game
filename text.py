@@ -6,3 +6,5 @@ GM_DSCRPTN_2 = "There is also a TREASURY at your disposal from which you can fin
 GM_DSCRPTN_3 = ("Do not forget about the other rulers of neighboring kingdoms. "
                 "Your actions may affect their attitude towards you.")
 START = "Let's start with your name: "
+PRIORITY = "Before your reign begins, enter the name of the new king."
+USER = "Please enter a name: "
