@@ -29,19 +29,20 @@ class user():
 
 
 def intro_scene():
-    priority = ['user_1', 'user_2', 'user_3', 'user_4']
 
     print(tx.PRIORITY_1)
-    user_1 = input(tx.USER)
-    user_2 = input(tx.USER)
-    user_3 = input(tx.USER)
-    user_4 = input(tx.USER)
+    user_name_1 = input(tx.USER)
+    user_name_2 = input(tx.USER)
+    user_name_3 = input(tx.USER)
+    user_name_4 = input(tx.USER)
 
+    priority = ['user_1', 'user_2', 'user_3', 'user_4']
     random.shuffle(priority)
 
-    random.randint(1,100)
-    priority =
-
+    user_1 = user(random.randint(1,100), random.randint(1, 100), random.randint(1,100), 1)
+    user_2 = user(random.randint(1,100), random.randint(1, 100), random.randint(1,100), 1)
+    user_3 = user(random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), 1)
+    user_4 = user(random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), 1)
     print(tx.PRIORITY_2)
 
 
@@ -54,4 +55,5 @@ if __name__ == "__main__":
         print(tx.GM_DSCRPTN_2)
         print(tx.GM_DSCRPTN_3)
         print(tx.START)
+        user()
         intro_scene()
