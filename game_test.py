@@ -34,10 +34,10 @@ class user():
         count = 0
         while track == user:
             if mng_event == 1 and non_mng_event == 1 and plot_event == 1:
-            count += 1
-            mng_event = 0
-            non_mng_event = 0
-            plot_event = 0
+                count += 1
+                mng_event = 0
+                non_mng_event = 0
+                plot_event = 0
 
 
 
