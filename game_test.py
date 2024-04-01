@@ -6,14 +6,24 @@ non_mng_event = 0
 plot_event = 0
 
 
+
+def user(chrch, army, ppl, wrld_authority):
+
+    chrch = random.randint(1, 100)
+    army = random.randint(1, 100)
+    ppl = random.randint(1, 100)
+    wrld_authority = 1
+
+'''
 class user():
 
     @classmethod
     def __init__(self, chrch, army, ppl, wrld_authority):
         self.chrch = chrch
-        self.army = army
-        self.ppl = ppl
-        self.wrld_authority = wrld_authority
+            random.randint(1, 100))
+        self.army = random.randint(1, 100)
+        self.ppl = random.randint(1, 100)
+        self.wrld_authority = 1
 
     @staticmethod
     def сounter_quarter():
@@ -26,24 +36,22 @@ class user():
                 mng_event = 0
                 non_mng_event = 0
                 plot_event = 0
-
+'''
 
 def intro_scene():
-
     print(tx.PRIORITY_1)
     user_name_1 = input(tx.USER)
     user_name_2 = input(tx.USER)
     user_name_3 = input(tx.USER)
     user_name_4 = input(tx.USER)
 
-    priority = ['user_1', 'user_2', 'user_3', 'user_4']
+    user_1 = user()
+
+    priority = ['user_name_1', 'user_name_2', 'user_name_3', 'user_name_4']
     random.shuffle(priority)
 
-    user_1 = user(random.randint(1,100), random.randint(1, 100), random.randint(1,100), 1)
-    user_2 = user(random.randint(1,100), random.randint(1, 100), random.randint(1,100), 1)
-    user_3 = user(random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), 1)
-    user_4 = user(random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), 1)
     print(tx.PRIORITY_2)
+    print(priority)
 
 
 if __name__ == "__main__":
