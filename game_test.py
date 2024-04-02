@@ -2,6 +2,12 @@ import text as tx
 import random
 
 
+mng_events = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+non_mng_events = [1, 2, 3, 4, 5, 6]
+plot_event = [1, 2, 3]
+
+
+
 class User:
 
     def __init__(self, name, church, army, ppl, wrld_authority, treasury):
@@ -15,7 +21,7 @@ class User:
     def display_stat(self):
         print(tx.STATISTIC.format(self.name, self.church, self.army, self.ppl))
 
-    def quarter(self):
+    def quarter(self):  # нужно доработать
         mng_event = 0
         non_mng_event = 0
         plot_event = 0
@@ -42,13 +48,10 @@ def intro_scene():
     print(tx.PRIORITY_1)
 
 
-def game_play():
-
-
-
 if __name__ == "__main__":
-    while User.quarter() <= 40:
-        intro_scene()
+    intro_scene()
+
+    while True:  # нужно разместить quarter
 
         user_name_1 = input(tx.USER)
         user_name_2 = input(tx.USER)
@@ -65,9 +68,5 @@ if __name__ == "__main__":
         user_2 = User(user_name_2, 20, 60, 45, 1, 1000)
         user_3 = User(user_name_3, 20, 60, 45, 1, 1000)
         user_4 = User(user_name_4, 20, 60, 45, 1, 1000)
-
-
-
-
 
 

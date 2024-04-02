@@ -17,6 +17,10 @@ STATISTIC = "Name: {}.\nChurch: {}\nArmy: {}\nPeople: {}"
 
 QUARTER = "Months passed: "
 
-MNG_EVENT =
+MENU_1 = "#1 - Start"
+MENU_2 = "#2 - View statistics"
+MENU_3 = "#3 - Exit"
+
+END = "The end, thanks for playing"
 
 
