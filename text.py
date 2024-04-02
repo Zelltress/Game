@@ -6,7 +6,7 @@ GM_DSCRPTN_1 = "Therefore, your power relies on the support of the CHURCH, the A
 GM_DSCRPTN_2 = "There is also a TREASURY at your disposal from which you can finance various initiatives."
 GM_DSCRPTN_3 = ("Do not forget about the other rulers of neighboring kingdoms. "
                 "Your actions may affect their attitude towards you.")
-START = "Let's start with your name: "
+
 
 PRIORITY_1 = "Before your reign begins, enter the name of the new king."
 PRIORITY_2 = "The order of passage is determined arbitrarily."
@@ -16,3 +16,7 @@ USER = "Please enter a name: "
 STATISTIC = "Name: {}.\nChurch: {}\nArmy: {}\nPeople: {}"
 
 QUARTER = "Months passed: "
+
+MNG_EVENT =
+
+

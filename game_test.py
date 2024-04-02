@@ -4,12 +4,13 @@ import random
 
 class User:
 
-    def __init__(self, name, church, army, ppl, wrld_authority):
+    def __init__(self, name, church, army, ppl, wrld_authority, treasury):
         self.name = name
         self.church = church
         self.army = army
         self.ppl = ppl
         self.wrld_authority = wrld_authority
+        self.treasury = treasury
 
     def display_stat(self):
         print(tx.STATISTIC.format(self.name, self.church, self.army, self.ppl))
@@ -41,6 +42,10 @@ def intro_scene():
     print(tx.PRIORITY_1)
 
 
+def game_play():
+
+
+
 if __name__ == "__main__":
     while User.quarter() <= 40:
         intro_scene()
@@ -56,13 +61,12 @@ if __name__ == "__main__":
         print(tx.PRIORITY_2)
         print(priority)
 
-        user_1 = User(user_name_1, 20, 60, 45, 1)
-        user_2 = User(user_name_2, 20, 60, 45, 1)
-        user_3 = User(user_name_3, 20, 60, 45, 1)
-        user_4 = User(user_name_4, 20, 60, 45, 1)
+        user_1 = User(user_name_1, 20, 60, 45, 1, 1000)
+        user_2 = User(user_name_2, 20, 60, 45, 1, 1000)
+        user_3 = User(user_name_3, 20, 60, 45, 1, 1000)
+        user_4 = User(user_name_4, 20, 60, 45, 1, 1000)
 
-        user_1.display_stat()
-        user_1.quarter()
+
 
 
 
