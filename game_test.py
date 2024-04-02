@@ -15,20 +15,19 @@ class User:
     def display_stat(self):
         print(tx.STATISTIC.format(self.name, self.chrch, self.army, self.ppl))
 
-    # @staticmethod
-    def сounter_quarter(self):
+    def quarter(self):
         mng_event = 0
         non_mng_event = 0
         plot_event = 0
-        track = 0
-        count = 0
-        while self == User:
+        count = 5
+        while self == User: #еще нужно проверить на работоспособность
             if mng_event == 1 and non_mng_event == 1 and plot_event == 1:
                 count += 1
                 mng_event = 0
                 non_mng_event = 0
                 plot_event = 0
-        return count
+
+        print(tx.QUARTER, count*3)
 
 
 def intro_scene():
@@ -64,5 +63,4 @@ if __name__ == "__main__":
     user_4 = User(user_name_4, 20, 60, 45, 1)
 
     user_1.display_stat()
-    user_1.сounter_quarter
-
+    user_1.quarter()

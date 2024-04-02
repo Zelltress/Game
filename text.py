@@ -14,3 +14,5 @@ PRIORITY_2 = "The order of passage is determined arbitrarily."
 USER = "Please enter a name: "
 
 STATISTIC = "Name: {}.\nChurch: {}\nArmy: {}\nPeople: {}"
+
+QUARTER = "Months passed: "
