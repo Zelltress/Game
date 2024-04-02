@@ -1,10 +1,6 @@
 import text as tx
 import random
 
-mng_event = 0
-non_mng_event = 0
-plot_event = 0
-
 
 class User:
 
@@ -19,21 +15,23 @@ class User:
     def display_stat(self):
         print(tx.STATISTIC.format(self.name, self.chrch, self.army, self.ppl))
 
-    ''''# @staticmethod
+    # @staticmethod
     def сounter_quarter(self):
-        global mng_event, non_mng_event, plot_event
+        mng_event = 0
+        non_mng_event = 0
+        plot_event = 0
         track = 0
         count = 0
-        while track == user:
+        while self == User:
             if mng_event == 1 and non_mng_event == 1 and plot_event == 1:
                 count += 1
                 mng_event = 0
                 non_mng_event = 0
                 plot_event = 0
-    '''
+        return count
+
 
 def intro_scene():
-
     print(tx.GREETING)
     print(tx.PLOT_1)
     print(tx.PLOT_2)
@@ -41,28 +39,30 @@ def intro_scene():
     print(tx.GM_DSCRPTN_2)
     print(tx.GM_DSCRPTN_3)
 
-
     print(tx.PRIORITY_1)
-
 
 
 if __name__ == "__main__":
     # while True:
 
-        intro_scene()
+    intro_scene()
 
-        user_name_1 = input(tx.USER)
-        user_name_2 = input(tx.USER)
-        user_name_3 = input(tx.USER)
-        user_name_4 = input(tx.USER)
+    user_name_1 = input(tx.USER)
+    user_name_2 = input(tx.USER)
+    user_name_3 = input(tx.USER)
+    user_name_4 = input(tx.USER)
 
-        priority = [user_name_1, user_name_2, user_name_3, user_name_4]
-        random.shuffle(priority)
+    priority = [user_name_1, user_name_2, user_name_3, user_name_4]
+    random.shuffle(priority)
 
-        print(tx.PRIORITY_2)
-        print(priority)
+    print(tx.PRIORITY_2)
+    print(priority)
 
-        user_1 = User(user_name_1, 20, 60, 45, 1)
-        user_2 = User(user_name_2, 20, 60, 45, 1)
+    user_1 = User(user_name_1, 20, 60, 45, 1)
+    user_2 = User(user_name_2, 20, 60, 45, 1)
+    user_3 = User(user_name_3, 20, 60, 45, 1)
+    user_4 = User(user_name_4, 20, 60, 45, 1)
 
+    user_1.display_stat()
+    user_1.сounter_quarter
 
