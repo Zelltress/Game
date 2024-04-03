@@ -23,4 +23,7 @@ MENU_3 = "#3 - Exit"
 
 END = "The end, thanks for playing"
 
+MNG_EV = "[How are yoy?, How you name?]"
+NON_MND_EV = "[1, 2, ,3 ]"
+
 
