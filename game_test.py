@@ -12,12 +12,11 @@ class Quiz:
         self.non_mng_events = non_mng_events
         self.plot_events = plot_events
 '''
-def quiz():
-    if count ==
-
+#def quiz(): #нужно рандомно выбрать атрибут и рандомно выбрать вопрос
 
 
 class User:
+    count = 0
 
     def __init__(self, name, church, army, ppl, wrld_authority, treasury):
         self.name = name
@@ -26,24 +25,17 @@ class User:
         self.ppl = ppl
         self.wrld_authority = wrld_authority
         self.treasury = treasury
+        self.attrlist = ['church', 'army', 'ppl']
+        User.count += 1
+
+
+    def dependence(self):
+        rand_attr = random.choice(self.attrlist)
+        attr_value = getattr(self, rand_attr)
+        setattr(self, rand_attr, attr_value + 10)
 
     def display_stat(self):
         print(tx.STATISTIC.format(self.name, self.church, self.army, self.ppl))
-
-    def quarter(self):  # нужно доработать
-        mng_event = 0
-        non_mng_event = 0
-        plot_event = 0
-        global count = 5
-        while self == User:  # еще нужно проверить на работоспособность
-            if mng_event == 1 and non_mng_event == 1 and plot_event == 1:
-                count += 1
-                mng_event = 0
-                non_mng_event = 0
-                plot_event = 0
-
-        print(tx.QUARTER, count * 3)
-        return count
 
 
 def intro_scene():
