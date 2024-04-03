@@ -5,18 +5,6 @@ mng_events = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 non_mng_events = [1, 2, 3, 4, 5, 6]
 plot_event = [1, 2, 3]
 
-'''
-class Quiz:
-    def __init__(self, mng_events, non_mng_events, plot_events):
-        self.mng_events = mng_events
-        self.non_mng_events = non_mng_events
-        self.plot_events = plot_events
-
-def quiz(): #нужно рандомно выбрать атрибут и рандомно выбрать вопрос
-    while True:
-        if User.count % 3 == 0:
-            dependence
-'''
 
 class User:
     count = 0
@@ -29,7 +17,7 @@ class User:
         self.wrld_authority = wrld_authority
         self.treasury = treasury
         self.attrlist = ['church', 'army', 'ppl']
-        User.count_+= 1
+        User.count += 1
         self.quiz()
 
     def dependence(self):
@@ -39,11 +27,6 @@ class User:
 
     def display_stat(self):
         print(tx.STATISTIC.format(self.name, self.church, self.army, self.ppl))
-
-    def quiz(self):
-        while True:
-            if User.count % 2
-
 
 
 def intro_scene():
