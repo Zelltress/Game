@@ -43,9 +43,9 @@ if __name__ == "__main__":
     intro_scene()
 
     user_name_1 = input(tx.USER)
-    user_name_2 = input(tx.USER)
+    '''user_name_2 = input(tx.USER)
     user_name_3 = input(tx.USER)
-    user_name_4 = input(tx.USER)
+    user_name_4 = input(tx.USER)'''
 
     # priority = [user_name_1, user_name_2, user_name_3, user_name_4]
     # random.shuffle(priority)
@@ -53,31 +53,36 @@ if __name__ == "__main__":
     # print(tx.PRIORITY_2)
     # print(priority)
 
-    st = random.randint(1, 50)
-
     user_1 = User(user_name_1, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
                   1, 1000)
-    user_2 = User(user_name_2, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
+    '''user_2 = User(user_name_2, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
                   1, 1000)
     user_3 = User(user_name_3, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
                   1, 1000)
     user_4 = User(user_name_4, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
-                  1, 1000)
+                  1, 1000)'''
 
     user_1.display_stat()
-    # user_2.display_stat()
-    # user_3.display_stat()
-    # user_4.display_stat()
 
-    while User.count != 10:  # нужно разместить quarter
-        j = random.randint(0, 3)
-        print(tx.ARMY_SMMR[j])
+    while User.count != 2:  # нужно разместить quarter
+        print(user_name_1, "! ", tx.PLOT_3, sep='')
+
+        print(tx.ARMY_SPRNG[0])
         user_wrd = input()
+        i = random.randint(5, 15)
         if user_wrd.lower() == answer[0].lower():
-            i = random.randint(5, 15)
             user_1.army = user_1.army + i
         else:
-            l = random.randint(5, 10)
-            user_1.army = user_1.army - l
+            user_1.army = user_1.army - i
         user_1.display_stat()
 
+        print(tx.PLOT_4)
+
+        print(tx.CHUCRH_SPRNG[0])
+        user_wrd = input()
+        i = random.randint(5, 15)
+        if user_wrd.lower() == answer[0].lower():
+            user_1.church = user_1.church + i
+        else:
+            user_1.church = user_1.church - i
+        user_1.display_stat()
