@@ -1,10 +1,6 @@
 import text as tx
 import random
 
-mng_events = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-non_mng_events = [1, 2, 3, 4, 5, 6]
-plot_event = [1, 2, 3]
-
 
 class User:
     count = 0
@@ -18,7 +14,6 @@ class User:
         self.treasury = treasury
         self.attrlist = ['church', 'army', 'ppl']
         User.count += 1
-        self.quiz()
 
     def dependence(self):
         rand_attr = random.choice(self.attrlist)
@@ -43,20 +38,27 @@ def intro_scene():
 if __name__ == "__main__":
     intro_scene()
 
+    user_name_1 = input(tx.USER)
+    user_name_2 = input(tx.USER)
+    user_name_3 = input(tx.USER)
+    user_name_4 = input(tx.USER)
+
+    priority = [user_name_1, user_name_2, user_name_3, user_name_4]
+    random.shuffle(priority)
+
+    print(tx.PRIORITY_2)
+    print(priority)
+
+    user_1 = User(user_name_1, 20, 60, 45, 1, 1000)
+    user_2 = User(user_name_2, 20, 60, 45, 1, 1000)
+    user_3 = User(user_name_3, 20, 60, 45, 1, 1000)
+    user_4 = User(user_name_4, 20, 60, 45, 1, 1000)
+
     while User.count != 40:  # нужно разместить quarter
 
-        user_name_1 = input(tx.USER)
-        user_name_2 = input(tx.USER)
-        user_name_3 = input(tx.USER)
-        user_name_4 = input(tx.USER)
+        print(tx.ARMY_SMMR[random.randint(0, 3)])
 
-        priority = [user_name_1, user_name_2, user_name_3, user_name_4]
-        random.shuffle(priority)
 
-        print(tx.PRIORITY_2)
-        print(priority)
 
-        user_1 = User(user_name_1, 20, 60, 45, 1, 1000)
-        user_2 = User(user_name_2, 20, 60, 45, 1, 1000)
-        user_3 = User(user_name_3, 20, 60, 45, 1, 1000)
-        user_4 = User(user_name_4, 20, 60, 45, 1, 1000)
+        
+
