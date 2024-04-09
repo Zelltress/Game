@@ -1,6 +1,8 @@
 import text as tx
 import random
 
+answer = ['да', 'нет']
+
 
 class User:
     count = 0
@@ -23,6 +25,8 @@ class User:
     def display_stat(self):
         print(tx.STATISTIC.format(self.name, self.church, self.army, self.ppl))
 
+    # def description(self):
+
 
 def intro_scene():
     print(tx.GREETING)
@@ -43,22 +47,37 @@ if __name__ == "__main__":
     user_name_3 = input(tx.USER)
     user_name_4 = input(tx.USER)
 
-    priority = [user_name_1, user_name_2, user_name_3, user_name_4]
-    random.shuffle(priority)
+    # priority = [user_name_1, user_name_2, user_name_3, user_name_4]
+    # random.shuffle(priority)
 
-    print(tx.PRIORITY_2)
-    print(priority)
+    # print(tx.PRIORITY_2)
+    # print(priority)
 
-    user_1 = User(user_name_1, 20, 60, 45, 1, 1000)
-    user_2 = User(user_name_2, 20, 60, 45, 1, 1000)
-    user_3 = User(user_name_3, 20, 60, 45, 1, 1000)
-    user_4 = User(user_name_4, 20, 60, 45, 1, 1000)
+    st = random.randint(1, 50)
 
-    while User.count != 40:  # нужно разместить quarter
+    user_1 = User(user_name_1, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
+                  1, 1000)
+    user_2 = User(user_name_2, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
+                  1, 1000)
+    user_3 = User(user_name_3, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
+                  1, 1000)
+    user_4 = User(user_name_4, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
+                  1, 1000)
 
-        print(tx.ARMY_SMMR[random.randint(0, 3)])
+    user_1.display_stat()
+    # user_2.display_stat()
+    # user_3.display_stat()
+    # user_4.display_stat()
 
-
-
-        
+    while User.count != 10:  # нужно разместить quarter
+        j = random.randint(0, 3)
+        print(tx.ARMY_SMMR[j])
+        user_wrd = input()
+        if user_wrd.lower() == answer[0].lower():
+            i = random.randint(5, 15)
+            user_1.army = user_1.army + i
+        else:
+            l = random.randint(5, 10)
+            user_1.army = user_1.army - l
+        user_1.display_stat()
 
