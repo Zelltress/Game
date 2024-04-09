@@ -5,7 +5,6 @@ answer = ['да', 'нет']
 
 
 class User:
-    count = 0
 
     def __init__(self, name, church, army, ppl, wrld_authority, treasury):
         self.name = name
@@ -15,7 +14,6 @@ class User:
         self.wrld_authority = wrld_authority
         self.treasury = treasury
         self.attrlist = ['church', 'army', 'ppl']
-        User.count += 1
 
     def dependence(self):
         rand_attr = random.choice(self.attrlist)
@@ -23,7 +21,7 @@ class User:
         setattr(self, rand_attr, attr_value + 10)
 
     def display_stat(self):
-        print(tx.STATISTIC.format(self.name, self.church, self.army, self.ppl))
+        print(tx.STATISTIC.format(self.name, self.church, self.army, self.ppl, self.treasury))
 
     # def description(self):
 
@@ -40,12 +38,13 @@ def intro_scene():
 
 
 if __name__ == "__main__":
+    count = 0
     intro_scene()
 
     user_name_1 = input(tx.USER)
-    '''user_name_2 = input(tx.USER)
+    user_name_2 = input(tx.USER)
     user_name_3 = input(tx.USER)
-    user_name_4 = input(tx.USER)'''
+    user_name_4 = input(tx.USER)
 
     # priority = [user_name_1, user_name_2, user_name_3, user_name_4]
     # random.shuffle(priority)
@@ -55,34 +54,78 @@ if __name__ == "__main__":
 
     user_1 = User(user_name_1, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
                   1, 1000)
-    '''user_2 = User(user_name_2, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
+    user_2 = User(user_name_2, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
                   1, 1000)
     user_3 = User(user_name_3, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
                   1, 1000)
     user_4 = User(user_name_4, random.randint(1, 50), random.randint(1, 50), random.randint(1, 50),
-                  1, 1000)'''
+                  1, 1000)
 
     user_1.display_stat()
 
-    while User.count != 2:  # нужно разместить quarter
-        print(user_name_1, "! ", tx.PLOT_3, sep='')
+    while count < 10 or (user_1.army or user_1.ppl or user_1.church or user_1.treasury) != 0:
 
-        print(tx.ARMY_SPRNG[0])
+        print('\n',user_name_1, "! ",'\n', tx.PLOT_3, sep='')
+
+        print(random.choice(tx.PEOPLE_SPRNG))
         user_wrd = input()
         i = random.randint(5, 15)
+        j = random.randint(20, 50)
         if user_wrd.lower() == answer[0].lower():
-            user_1.army = user_1.army + i
+            user_1.ppl = user_1.ppl + i
+            user_1.treasury = user_1.treasury - j
         else:
-            user_1.army = user_1.army - i
+            user_1.ppl = user_1.ppl - i
         user_1.display_stat()
 
-        print(tx.PLOT_4)
 
-        print(tx.CHUCRH_SPRNG[0])
+        print('\n', tx.TREASURY_SPRNG[1])
         user_wrd = input()
         i = random.randint(5, 15)
+        j = random.randint(20, 50)
         if user_wrd.lower() == answer[0].lower():
-            user_1.church = user_1.church + i
+            user_1.ppl = user_1.ppl + i
+            user_1.treasury = user_1.treasury - j
+            user_1.wrld_authority = 2
         else:
-            user_1.church = user_1.church - i
+            user_1.ppl = user_1.ppl - i
         user_1.display_stat()
+
+
+        if user_1.wrld_authority == 2:
+            print('\n',user_name_2, "! ",'\n', tx.PLOT_4[0], sep='')
+        else:
+            print('\n',user_name_2, "! ",'\n', tx.PLOT_4[1], sep='')
+
+        print('\n',random.choice(tx.ARMY_SPRNG))
+        user_wrd = input()
+        i = random.randint(5, 15)
+        j = random.randint(20, 50)
+        if user_wrd.lower() == answer[0].lower():
+            user_2.army = user_2.army + i
+            user_2.treasury = user_2.treasury - j
+        else:
+            user_2.army = user_2.army - i
+        user_2.display_stat()
+
+        print('\n',random.choice(tx.CHUCRH_SPRNG))
+        user_wrd = input()
+        i = random.randint(5, 15)
+        j = random.randint(20, 50)
+        if user_wrd.lower() == answer[0].lower():
+            user_2.church = user_2.church + i
+            user_2.treasury = user_2.treasury - j
+        else:
+            user_2.church = user_2.church - i
+        user_2.display_stat()
+
+        print('\n',random.choice(tx.PEOPLE_SPRNG))
+        user_wrd = input()
+        i = random.randint(5, 15)
+        j = random.randint(20, 50)
+        if user_wrd.lower() == answer[0].lower():
+            user_2.ppl = user_2.ppl + i
+            user_2.treasury = user_2.treasury - j
+        else:
+            user_2.ppl = user_2.ppl - i
+        user_2.display_stat()
