@@ -44,14 +44,14 @@ if __name__ == "__main__":
     print(user_1.display_stat(), '\n')
     print(user_2.display_stat(), '\n')
 
-    while count < 10 or (user_1.army or user_1.ppl or user_1.church or user_1.treasury) != 0:
+    while count < 3 or (user_1.army or user_1.ppl or user_1.church or user_1.treasury) != 0:
 
         print('\n', user_name_1, "! ", '\n', tx.PLOT_3, sep='')
 
         print(tx.PEOPLE_SPRNG[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 125)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_1.ppl += i
             user_1.treasury -= j
@@ -61,8 +61,8 @@ if __name__ == "__main__":
 
         print('\n', tx.TREASURY_SPRNG[1])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_1.ppl += i
             user_1.treasury -= j
@@ -78,8 +78,8 @@ if __name__ == "__main__":
 
         print('\n', tx.ARMY_SPRNG[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_2.army += i
             user_2.treasury -= j
@@ -89,8 +89,8 @@ if __name__ == "__main__":
 
         print('\n', tx.CHUCRH_SPRNG[1])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_2.church += i
             user_2.ppl -= i
@@ -103,8 +103,8 @@ if __name__ == "__main__":
 
         print(tx.CHURCH_SMMR[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_1.ppl += i
             user_1.church += i
@@ -116,8 +116,8 @@ if __name__ == "__main__":
 
         print('\n', tx.ARMY_SMMR[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_1.army += i
             user_1.treasury -= j
@@ -127,8 +127,8 @@ if __name__ == "__main__":
 
         print('\n', tx.TREASURY_SMMR[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_2.treasury += j
         else:
@@ -137,8 +137,8 @@ if __name__ == "__main__":
 
         print('\n', tx.PEOPLE_SMMR[1])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 1000)
         if user_wrd.lower() == answer[0]:
             user_2.ppl += i
             user_2.treasury -= j
@@ -151,8 +151,8 @@ if __name__ == "__main__":
 
         print(tx.TREASURY_FALL[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_1.ppl += i
             user_1.treasury -= j
@@ -162,8 +162,8 @@ if __name__ == "__main__":
 
         print('\n', tx.CHURCH_FALL[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 12)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_1.church += i
             user_1.treasury -= j
@@ -175,8 +175,8 @@ if __name__ == "__main__":
 
         print('\n', tx.TREASURY_FALL[1])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_2.treasury += j
         else:
@@ -185,8 +185,8 @@ if __name__ == "__main__":
 
         print('\n', tx.PEOPLE_FALL[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0].lower():
             user_2.ppl += i
             user_2.treasury -= j
@@ -199,8 +199,8 @@ if __name__ == "__main__":
         if user_1.church <= 10:
             print(tx.CHURCH_WNTR[1])
             user_wrd = input()
-            i = random.randint(5, 15)
-            j = random.randint(20, 50)
+            i = random.randint(10, 25)
+            j = random.randint(50, 100)
             if user_wrd.lower() == answer[0]:
                 user_1.ppl -= i
                 user_1.army -= i
@@ -209,7 +209,6 @@ if __name__ == "__main__":
             elif user_1.wrld_authority == 1:
                 print(tx.END[0])
                 break
-
             else:
                 print(tx.END[1])
                 break
@@ -217,8 +216,8 @@ if __name__ == "__main__":
 
         print('\n', tx.ARMY_WNTR[1])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0]:
             user_2.treasury += j
             user_2.army += i
@@ -228,8 +227,8 @@ if __name__ == "__main__":
 
         print('\n', tx.PEOPLE_WNTR[0])
         user_wrd = input()
-        i = random.randint(5, 15)
-        j = random.randint(20, 50)
+        i = random.randint(10, 25)
+        j = random.randint(50, 100)
         if user_wrd.lower() == answer[0].lower():
             user_2.ppl -= 2 * i
             user_2.treasury -= 2 * j
