@@ -1,8 +1,10 @@
+# Case-study №5
+# Developers: Ivanova A. Cherkashina D.
+
 import text as tx
 import random
 
 answer = [tx.YES, tx.NO]
-
 
 class User:
 
